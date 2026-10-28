@@ -1,0 +1,23 @@
+def logical_left_shift(binary_str, shift_amt=2):
+    orig_val = int(binary_str, 2) & 0xFF
+    orig_8bit = f"{orig_val:08b}"
+    shifted_val = orig_val << shift_amt
+    result_8bit = f"{(shifted_val & 0xFF):08b}"
+    print("a) Logical Left Shift by 2 positions:")
+    print(f"  Input literal:               {binary_str}")
+    print(f"  Original 8-bit representation: {orig_8bit}")
+    print(f"  Step 1 (Shift left by 2):     {shifted_val:010b}")
+    print(f"  Step 2 (Truncate to 8-bit):   {result_8bit}")
+    print(f"  Final 8-bit Binary Result:   {result_8bit}\n")
+def logical_right_shift(binary_str, shift_amt=2):
+    orig_val = int(binary_str, 2) & 0xFF
+    orig_8bit = f"{orig_val:08b}"
+    shifted_val = orig_val >> shift_amt
+    result_8bit = f"{shifted_val:08b}"
+    print("b) Logical Right Shift by 2 positions:")
+    print(f"  Original 8-bit representation: {orig_8bit}")
+    print(f"  Step 1 (Shift right by 2):    00{orig_8bit[:-2]}")
+    print(f"  Final 8-bit Binary Result:   {result_8bit}\n")
+print("--- Verification of Binary Shift Operations ---\n")
+logical_left_shift("1111110110", 2)
+logical_right_shift("10010100", 2)

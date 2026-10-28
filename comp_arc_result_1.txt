@@ -1,0 +1,27 @@
+--- Verification of Arithmetic Expressions ---
+
+Expression a) (24 + (+17))
+Operands in 8-bit format: 
+  Operand 1 ( 24): 00011000
+  Operand 2 ( 17): 00010001
+
+Execution in 16-bit 2's Complement Arithmetic:
+    0000000000011000  (24)
+  + 0000000000010001  (17)
+    ---------------------
+    0000000000101001  (Decimal Result: 41)
+Arithmetic Overflow Detected: False
+============================================================
+
+Expression b) ((-25) + (-18))
+Operands in 8-bit format: 
+  Operand 1 (-25): 11100111
+  Operand 2 (-18): 11101110
+
+Execution in 16-bit 2's Complement Arithmetic:
+    1111111111100111  (-25)
+  + 1111111111101110  (-18)
+    ---------------------
+    1111111111010101  (Decimal Result: -43)
+Arithmetic Overflow Detected: False
+============================================================

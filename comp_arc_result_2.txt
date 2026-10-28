@@ -1,0 +1,13 @@
+--- Verification of Binary Shift Operations ---
+
+a) Logical Left Shift by 2 positions:
+  Input literal:               1111110110
+  Original 8-bit representation: 11110110
+  Step 1 (Shift left by 2):     1111011000
+  Step 2 (Truncate to 8-bit):   11011000
+  Final 8-bit Binary Result:   11011000
+
+b) Logical Right Shift by 2 positions:
+  Original 8-bit representation: 10010100
+  Step 1 (Shift right by 2):    00100101
+  Final 8-bit Binary Result:   00100101
